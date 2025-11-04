@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application 
+        title="Panorama des projets de biodiversité"         
+        htmltitle="Panorama des &lt;br&gt; &lt;b&gt;projets de biodiversité&lt;/b&gt;" 
+        id="abb_projetsbio" 
+        home="https://biodiversite.bzh/"
+        style="apps/projets-biodiversite/css/abb_customtheme.css" 
+        logo="apps/projets-biodiversite/img/logo_abb.png" 
+        favicon="apps/projets-biodiversite/img/logo_abb.png" 
+        help="apps/home.html" exportpng="true" showhelp="false" 
+        templaterightinfopanel="brut">
+    </application>
+
+    <mapoptions maxzoom="20" projection="EPSG:3857" center="-307903.74898791354,6141345.088741366" zoom="8"/>
+
+    <baselayers style="default">
+        <baselayer visible="true" id="positron" thumbgallery="img/basemap/positron.png" title="CartoDb" label="Positron" type="OSM" url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" attribution="Map tiles by  &lt;a href=&quot;https://cartodb.com/attributions&quot;&gt;CartoDb&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"/>
+        <baselayer  type="OSM" id="osm1" attributioncollapsible="false" label="OpenStreetMap" title="OpenStreetMap" thumbgallery="img/basemap/osm.png" 
+            url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+            attribution="© MapQuest. Données : les contributeurs d'&lt;a href='https://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='https://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" visible="false"/>
+        <baselayer  type="WMTS" id="ortho" label="Photo aérienne IGN" title="GéoPortail" maxscale="1000" thumbgallery="img/basemap/ortho.jpg"
+                url="https://data.geopf.fr/wmts" layers="ORTHOIMAGERY.ORTHOPHOTOS" format="image/jpeg" visible="false" fromcapacity="false"
+                attribution="&lt;a href='https://geoservices.ign.fr/services-geoplateforme-diffusion' target='_blank'>&lt;img src='img/basemap/geoservices.png'>&lt;/a>" style="normal" matrixset="PM" maxzoom="22"/>
+    </baselayers>
+    
+    <elasticsearchs>
+        <elasticsearch url="https://ows.region-bretagne.fr/els/unite_administrative/_search" geometryfield="location" linkid="search_id" querymode="match" 
+            version="7.17" geometryformat="WKT" mouseoverfields="title" displayfields="title" layer="unite_administrative"/>
+    </elasticsearchs>
+
+    <olscompletion url="https://data.geopf.fr/geocodage/completion" type="completion" attribution="Service d'autocomplétion de l'IGN"/>
+
+    <searchparameters bbox="false" localities="false" features="true" static="false" inputlabel="Rechercher une intercommunalité ou une commune" querymaponclick="false" closeafterclick="true" />
+
+    <styles>
+        <selectionstyle>
+            <point radius="7" fillcolor="255,144,0" opacity="0" strokecolor="255,144,0" strokewidth="4" />
+            <polygon fillcolor="255,144,0" opacity="0" strokecolor="255,144,0" strokewidth="2" />
+        </selectionstyle>
+        <subselectionstyle>
+            <point radius="7" fillcolor="255,144,0" opacity="0" strokecolor="255,144,0" strokewidth="2" />
+            <polygon fillcolor="255,144,0" opacity="0" strokecolor="255,144,0" strokewidth="2" />
+        </subselectionstyle>
+    </styles>
+
+    <extensions>
+        <!--<extension type="component" id="zoomToArea" path="apps/projets-biodiversite/addons"/>
+        <extension type="component" id="print" path="apps/projets-biodiversite/addons"/>-->
+    </extensions>
+
+    <themes mini="true" legendmini="false"> 
+            <theme name="Projets"  collapsed="true" id="projets" icon="fas fa-leaf">
+                <layer id="projets_biodiversite" name="Projets biodiversité"  visible="true" tiled="false"
+                        searchable="false" queryable="true"  
+                        infoformat="application/vnd.ogc.gml" featurecount="20"
+                        type="customlayer"
+                        url="apps/projets-biodiversite/customlayers/projetsbio.js"                    
+                        nohighlight="true"
+                        legendurl="apps/projets-biodiversite/img/lgd_projetsbio.JPG"
+                        customcontrol="true" customcontrolpath="apps/projets-biodiversite/customcontrols"
+                        attribution="Source: Agence Bretonne de la biodiversité - Région Bretagne - OFB" 
+                        tooltip="true" tooltipcontent="{{nom_projet}}"
+                        metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=c55c4fba-6a37-48ea-8754-a1bf770a684b"
+                        metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=c55c4fba-6a37-48ea-8754-a1bf770a684b" >
+                        <template url="apps/projets-biodiversite/templates/projets_biodiversite.mst"></template>
+                </layer>
+            </theme>
+            <theme name="Limites" collapsed="true" id="limites">
+                <layer id="unite_administrative" name="Unité admin" visible="true" tiled="false" namespace="rb"
+                    queryable="false"
+                    searchable="true"
+                    showintoc="false" style="transparent"
+                    url="https://ows.region-bretagne.fr/geoserver/interne/wms" 
+                    attribution="IGN - Admin Express" 
+                    metadata=""
+                    metadata-csw="" >
+                </layer>
+                <layer id="departement_metro" name="Département" visible="true" tiled="false" namespace="rb"
+                        queryable="false"
+                        showintoc="false"
+                        url="https://geobretagne.fr/geoserver/ign/wms" 
+                        attribution="IGN - Admin Express" 
+                        metadata="https://geobretagne.fr/geonetwork/srv/fre/catalog.search?node=srv#/metadata/c8884cac-bc25-41a0-92d1-b6566c86066e"
+                        metadata-csw="https://geobretagne.fr/geonetwork/srv/fre/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=c8884cac-bc25-41a0-92d1-b6566c86066e" >
+                </layer>
+                <layer id="epci" name="Intercommunalité" visible="false" tiled="false"
+                    queryable="false"
+                    infoformat="application/vnd.ogc.gml" featurecount="5"
+                    style="epci_region" 
+                    url="https://geobretagne.fr/geoserver/ign/wms" 
+                    attribution="IGN - ADMIN EXPRESS" 
+                    metadata="https://geobretagne.fr/geonetwork/srv/eng/catalog.search?node=srv#/metadata/2298d744-49cb-4fcb-9487-26f916fecdff" 
+                    metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=2298d744-49cb-4fcb-9487-26f916fecdff" >	
+                    <template url="https://kartenn.region-bretagne.fr/kartoviz/apps/region/global/templates/global.epci.mst"></template>
+                </layer>
+                <layer id="parc_naturel_regional" name="Parc naturel régional" visible="false" tiled="false"
+                    queryable="false"
+                    infoformat="application/vnd.ogc.gml" featurecount="5"
+                    url="https://ows.region-bretagne.fr/geoserver/rb/wms" 
+                    attribution="région Bretagne" 
+                    metadata="https://geobretagne.fr/geonetwork/srv/eng/catalog.search?node=srv#/metadata/9df1d4b7-221c-4424-af3f-50a898e3d333" 
+                    metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=9df1d4b7-221c-4424-af3f-50a898e3d333" >	
+                </layer>
+        </theme>
+    </themes>
+</config>

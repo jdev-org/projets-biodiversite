@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --mvcustom-color-primary: #000000;
+  --mvcustom-font: "Montserrat", sans-serif;
+  /* Indiquer une couleur secondaire pour un thème bicolore */
+  /*--mvcustom-color-secondary: #87b1a4;*/
+  /* Taille des panels d'interrogation (exprimée en px ou %)*/  
+  --mvcustom-rightpanel-size: 25%;
+}
+
+.layerdisplay-titleLabel {
+  font-weight: 700!important;
+  color: var(--mv-color-primary);
+}

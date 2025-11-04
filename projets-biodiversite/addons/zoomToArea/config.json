@@ -1,0 +1,19 @@
+{
+  "js": ["zoomToArea.js"],
+  "css": "style.css",
+  "html": "zoomToArea.html",
+  "target": "page-content-wrapper",
+  "options": {
+    "mviewer": {
+      "abb_projetsbio": {
+        "dataUrl": "https://geobretagne.fr/geoserver/ign/wfs?service=wfs&version=1.0.0&request=getfeature&typename=epci&outputformat=application%2Fjson&srsName=EPSG:3857",
+        "dataEPSG": "EPSG:3857",
+        "fieldNameAreas": "nom",
+        "fieldIdAreas": "code_epci",
+        "fieldSortBy": "nom",
+        "bufferSize": 10000,
+        "selectLabel": "Zoomer sur un territoire"
+      }
+    }
+  }
+}

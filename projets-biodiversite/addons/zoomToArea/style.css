@@ -1,0 +1,13 @@
+#zoomAreaSelector {
+    max-width: 250px;
+    font-size: 0.9em;
+}
+
+.xs #zoomAreaSelector {
+    max-width: 50% !important;
+    position: fixed;
+    left: 50%;  
+    transform: translateX(-50%);
+    bottom: 5em;
+    top: auto;
+}

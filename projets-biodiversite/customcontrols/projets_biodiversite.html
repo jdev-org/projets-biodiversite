@@ -1,0 +1,127 @@
+<style>
+    
+
+    /* Display original legend */
+    .list-group-item[data-layerid="projets_biodiversite"] .layerdisplay-legend {
+        display: none;
+    }
+
+    .lgdCustom__list {
+        padding: .5em 0.25em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lgdCustom__list .tooltip-trigger {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    #legend-modal .lgdCustom__list .tooltip-trigger {
+        font-size: 18px;
+    }
+
+    .lgdCustom__symbolSquare {
+        width: 27px;
+        height: 17px;
+        background-color: gray;
+        flex-shrink: 0;
+        border: 1px solid #0003;
+    }
+
+    .hatch-square-tvb {
+        background-color: white;
+        background-image: repeating-linear-gradient(
+            45deg,                 
+            #267687,               
+            #267687 1px,
+            transparent 1px,
+            transparent 4px     
+        );
+        border: 1px solid #267687;
+        box-sizing: border-box;
+    }
+
+    .hatch-square-strat {
+        background-color: white;
+        background-image: repeating-linear-gradient(
+            -45deg,                 
+            #3dbea4,               
+            #3dbea4 1px,
+            transparent 1px,
+            transparent 4px     
+        );
+        border: 1px solid #3dbea4;
+        box-sizing: border-box;
+    }
+
+    .lgdCustom__symbolRound {
+        font-size: larger;
+        margin-right: 5px;
+    }
+
+    .lgdCustom__subLabel {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    /* Style to custom tooltip */
+
+    #projetsBioLgdCustom .tooltip-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    #projetsBioLgdCustom .tooltip-trigger {
+        cursor: help;
+    }
+
+    #projetsBioLgdCustom .tooltip {
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 8px 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        z-index: 100;
+        font-family: var(--bs-body-font-family);
+    }
+
+    #projetsBioLgdCustom .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+    }
+
+    /* Desktop hover */
+    #projetsBioLgdCustom .tooltip-container:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* Mobile active */
+    #projetsBioLgdCustom .tooltip-container.active .tooltip {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+</style>

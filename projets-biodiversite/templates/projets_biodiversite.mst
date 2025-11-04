@@ -1,0 +1,166 @@
+{{#features}}
+    <li id="item_{{feature_ol_uid}}" class="item" style="width:100%;">
+        <div class="item__card">
+            <div class="itemCard__header">
+                <h5>{{nom_projet}} {{#porteur}}― {{porteur}}{{/porteur}} </h5>
+                <div class="card__badge">{{etat_projet}}</div>
+            </div>
+            <div class="itemCard__body">          
+                {{#porteur}}  
+                <div>
+                    <div class="cardBody_subtitle">Porteur du projet</div>                    
+                    <div>{{porteur}}</div>
+                </div> 
+                {{/porteur}} 
+                {{#type_projet}}                 
+                <div>
+                    <div class="cardBody_subtitle">Dispositif</div>                    
+                    <div>{{type_projet}}</div>
+                </div> 
+                {{/type_projet}}
+                {{#thematique}}              
+                <div>
+                    <div class="cardBody_subtitle">Thématiques</div>                    
+                    <div>{{thematique}}</div>
+                </div>
+                {{/thematique}}
+                {{#milieu}}
+                <div>
+                    <div class="cardBody_subtitle">Milieu(x)</div>                    
+                    <div>{{milieu}}</div>
+                </div>
+                {{/milieu}}
+                <div>{{description}}</div>
+                <div class="my-4">
+                    <a class="cardBtn cardBtn__prim" href="" target="_blank">Consulter le RETEX</a>
+                    {{#site_web}}<a class="cardBtn cardBtn__outline" href="{{site_web}}" target="_blank">En savoir plus</a>{{/site_web}}
+                </div>
+                
+            </div>          
+        </div>
+    </li>   
+<style>
+    .featureInfo__brut .card-header {
+        display: none;
+    }
+
+    .featureInfo__brut .card {
+        border: none;
+    }
+
+    .featureInfo__brut li:not(:first-child) {
+        border: none;
+    }
+
+    .item__card {
+        border-bottom: 3px solid var(--main-color, #303030);
+    }
+
+    .itemCard__header {
+        padding: 10px;
+        background-color: var(--main-color, #303030);
+        color: white;
+    }
+
+    .itemCard__header h5 {
+        color: white;
+        margin: 0;
+    }
+
+    .card__badge {
+        background-color: white;
+        display: inline-flex;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 1em;
+        color: var(--main-color, #303030);
+    }
+    .itemCard__body {
+        font-size: 15px;
+    }
+
+    .itemCard__body > div {
+        margin: 10px 0;
+    }
+
+    .cardBody_subtitle {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--main-color, #303030);
+    }   
+
+    .cardBtn {
+        padding: 6px 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .cardBtn__prim{
+        background-color: var(--main-color, #303030);
+        border: 2px solid var(--main-color, #303030);
+        color: white;
+    }
+
+    .cardBtn__prim:hover {
+        background-color: transparent;
+        color: var(--main-color, #303030);
+    }
+
+    .cardBtn__outline{
+        border: 2px solid var(--main-color, #303030);
+        color: var(--main-color, #303030);
+        font-weight:bold;
+    }
+
+    .cardBtn__outline:hover {
+        background-color: var(--main-color, #303030);
+        border: 2px solid var(--main-color, #303030);
+        color: white;
+    }
+
+    .card_ABC .itemCard__header h5, 
+    .card_ABC .cardBody_subtitle,
+    .card_ABC .card__badge,
+    .card_ABC .cardBtn__prim,
+    .card_ABC .cardBtn__outline,
+    .card_TEN .itemCard__header h5,
+    .card_TEN .cardBody_subtitle,
+    .card_TEN .card__badge,
+    .card_TEN .cardBtn__prim,
+    .card_TEN .cardBtn__outline {
+        color: black!important;
+    }
+
+</style> 
+<script>
+    const typeProjet = '{{type_projet}}';
+    const card = document.querySelector('#item_{{feature_ol_uid}} .item__card');
+
+    // Nettoyage du type
+    const cleanType = typeProjet
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
+        .replace(/\s+/g, '')                              
+        .replace(/[^a-zA-Z0-9_-]/g, '');                  
+
+    card.classList.add(`card_${cleanType}`);
+
+    const couleursProjet = {
+        "RechercheAction": "#000000",
+        "SafN": "#1b218d",
+        "Strategieplandactions": "#3dbea4",
+        "TEN": "#e5d935",
+        "ProjetTVB-Phaseoperationnelle": "#267687",
+        "ProjetTVB-Diagetpland39actions": "#267687",
+        "ABC": "#bae052",
+        "AME": "#4a24fc",
+        "ATE": "#43d796"
+    };
+
+    const couleur = couleursProjet[cleanType] || "#303030";
+
+    card.style.setProperty('--main-color', couleur);
+</script>
+{{/features}}

@@ -1,0 +1,20 @@
+{
+  "js": [
+    "js/print.js",
+    "../lib/jquery.easyDrag.min.js",
+    "../lib/html2pdf/html2pdf.bundle.min.js"
+  ],
+  "css": "style.css",
+  "type": "module",
+  "html": "print.html",
+  "target": "page-content-wrapper",
+  "options": {
+    "mviewer": {
+      "abb_projetsbio": {
+        "printLayouts": "addons/print/layouts/standard.json",
+        "ownerLogo": "apps/projets-biodiversite/img/logo_abb.png",
+        "ownerInfos": ""
+      }
+    }
+  }
+}
