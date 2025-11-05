@@ -211,6 +211,16 @@
     height: 100%;
 }
 
+/* Custom ABB */
+
 .legend .text-big-legend {
     display: none;
+}
+
+#print-informations .btn-close {
+    display: none;
+}
+
+#print-informations {
+    resize: none;
 }

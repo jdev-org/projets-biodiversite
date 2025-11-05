@@ -1,0 +1,54 @@
+{
+  "js": ["js/filter.js", "../lib/jquery.easyDrag.min.js"],
+  "css": "css/filter.css",
+  "html": "filter.html",
+  "target": "page-content-wrapper",
+  "options": {
+    "mviewer": {
+      "abb_projetsbio": {
+        "title": "Filtrer",
+        "open": true,
+        "zoomOnFeatures": true,
+        "legendTitle": "Sélectionner une donnée :",
+        "style": {
+          "top": "5em",
+          "right": "5em", 
+          "left": "auto"
+        },
+        "layers": [
+          {
+            "layerId": "projets_biodiversite",
+            "downloadFormats": [
+              { "label": "CSV", "format": "CSV" },
+              { "label": "Geojson", "format": "application/json" },
+              { "label": "Excel", "format": "excel" }
+            ],
+            "filter": [
+              {
+                "attribut": "type_projet",
+                "type": "button",
+                "label": "Dispositif",
+                "dataSeparator": ";",
+                "updateOnChange": false
+              },
+              {
+                "attribut": "thematique",
+                "type": "button",
+                "label": "Thématique",
+                "dataSeparator": ";",
+                "updateOnChange": true
+              },
+              {
+                "attribut": "milieu",
+                "type": "button",
+                "label": "Milieu",
+                "dataSeparator": ";",
+                "updateOnChange": true
+              }
+            ]
+          }
+        ]
+      }      
+    }
+  }
+}

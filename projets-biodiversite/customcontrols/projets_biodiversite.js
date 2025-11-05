@@ -70,7 +70,7 @@ const cc = (function () {
             <div class="lgdCustom__subLabel">Les aires éducatives</div>
             <div class="tooltip-container">
                 <div class="tooltip-trigger">
-                    <div><span class="lgdCustom__symbolRound" style="color:rgba(74,36,252, 1)">⬤</span><span>Aire marine</span></div>
+                    <div><span class="lgdCustom__symbolRound" style="color:#0025FF">⬤</span><span>Aire marine</span></div>
                 </div>
                 <div class="tooltip" role="tooltip">
                     Définition

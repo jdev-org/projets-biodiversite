@@ -137,7 +137,7 @@ const hatchFill2 = new ol.style.Fill({
             zIndex: 8,
             image: new ol.style.Circle({
               fill: new ol.style.Fill({
-                color: "rgba(74,36,252, 1)",
+                color: "#0025FF",
               }),
               stroke: new ol.style.Stroke({
                 color: "#ffffff",
@@ -189,7 +189,6 @@ const hatchFill2 = new ol.style.Fill({
             break;
         case "Stratégie – plan d’actions ":
             stl = legend.items[2].styles;
-            console.log("strate")
             break;
         case "TEN":
             stl = legend.items[3].styles;
