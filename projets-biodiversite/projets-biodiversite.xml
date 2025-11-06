@@ -8,7 +8,7 @@
         style="apps/projets-biodiversite/css/abb_customtheme.css" 
         logo="apps/projets-biodiversite/img/logo_abb.png" 
         favicon="apps/projets-biodiversite/img/logo_abb.png" 
-        help="apps/home.html" exportpng="true" showhelp="false" 
+        help="apps/projets-biodiversite/templates/home.html" exportpng="true" showhelp="true" 
         templaterightinfopanel="brut">
     </application>
 
@@ -47,7 +47,7 @@
     </styles>
 
     <extensions>
-        <extension type="component" id="zoomToArea" path="apps/projets-biodiversite/addons"/>
+        <!--<extension type="component" id="zoomToArea" path="apps/projets-biodiversite/addons"/>-->
         <extension type="component" id="print" path="apps/projets-biodiversite/addons"/>
         <extension type="component" id="filter" path="apps/projets-biodiversite/addons"/>
     </extensions>
