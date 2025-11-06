@@ -205,11 +205,11 @@
 
 /* Content */
 
-.accordion-item {
+.abbHome__container .accordion-item {
 	border-bottom: 2px solid #000000;
 }
 
-.accordion-header {
+.abbHome__container .accordion-header {
 	cursor: pointer;
 	padding: 1em 0;
 	display: flex;
@@ -220,23 +220,23 @@
 	transition: all 0.2s ease;
 }
 
-.accordion-header svg {
+.abbHome__container .accordion-header svg {
 	width: 30px;
 	height: 30px;
 	transition: transform 0.3s ease;
 }
 
-.accordion-header.active svg {
+.abbHome__container .accordion-header.active svg {
 	transform: rotate(180deg);
 }
 
-.accordion-content {
+.abbHome__container .accordion-content {
 	max-height: 0;
 	overflow: hidden;
 	transition: all 0.3s ease;
 }
 
-.accordion-content.open {
+.abbHome__container .accordion-content.open {
 	max-height: 600px;
 }
 
