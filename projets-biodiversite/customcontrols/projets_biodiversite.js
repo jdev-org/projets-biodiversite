@@ -83,8 +83,11 @@ const cc = (function () {
                 <div class="tooltip" role="tooltip">
                     Définition
                 </div>
-            </div>
+            </div>            
           </div>
+          <button class="btn btn-outline-primary btn-sm btn-custom-filter" data-bs-original-title="Filtrer les projets" onclick="filter.toggle();">
+              Filtrer les projets
+          </button>
         </div>
       `;
       target.insertAdjacentHTML("afterend", lgdcustom);

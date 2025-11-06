@@ -9,7 +9,8 @@
         logo="apps/projets-biodiversite/img/logo_abb.png" 
         favicon="apps/projets-biodiversite/img/logo_abb.png" 
         help="apps/projets-biodiversite/templates/home.html" exportpng="true" showhelp="true" 
-        templaterightinfopanel="brut">
+        templaterightinfopanel="brut"
+        templatemobileinfopanel="brut">
     </application>
 
     <mapoptions maxzoom="20" projection="EPSG:3857" center="-307903.74898791354,6141345.088741366" zoom="8"/>

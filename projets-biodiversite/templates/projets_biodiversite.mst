@@ -140,6 +140,14 @@
         font-weight: 500;
     }
 
+    .xs .featureInfo__brut .card {
+        margin: 0;
+    }
+
+    .xs .featureInfo__brut .list-group.card-body{
+        padding:0;
+    }
+
 </style> 
 <script>
     const typeProjet = '{{type_projet}}';
