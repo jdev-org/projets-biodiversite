@@ -80,34 +80,24 @@
         cursor: help;
     }
 
-    #projetsBioLgdCustom .tooltip {
+    .lgdcustom-tooltip {
         position: absolute;
         bottom: 120%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #333;
+        background: #060606;
+        border: none;
         color: white;
         padding: 8px 10px;
         border-radius: 4px;
-        font-size: 0.9em;
-        white-space: nowrap;
+        font-size: 0.8em;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s ease;
         pointer-events: none;
         z-index: 100;
         font-family: var(--bs-body-font-family);
-    }
-
-    #projetsBioLgdCustom .tooltip::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-width: 6px;
-        border-style: solid;
-        border-color: #333 transparent transparent transparent;
+        max-width: 220px;
+        min-height: min-content;
+        line-height: 1.1;
     }
 
     /* Desktop hover */

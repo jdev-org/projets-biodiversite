@@ -68,7 +68,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 6,
+            zIndex: 1,
             stroke: new ol.style.Stroke({ color: "rgba(0, 0, 0, 1)", width: 1 }),
             fill: new ol.style.Fill({ color: "rgba(0, 0, 0, 0)" }),
           }),
@@ -79,7 +79,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 4,
+            zIndex: 5,
             stroke: new ol.style.Stroke({ color: "rgba(27, 33, 141, 1)", width: 1 }),
             fill: new ol.style.Fill({ color: "rgba(27, 33, 141, 0.7)" }),
           }),
@@ -90,7 +90,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 1,
+            zIndex: 2,
             stroke: new ol.style.Stroke({ color: "rgba(61, 190, 164, 1)", width: 1 }),
             fill: hatchFill2,
           }),
@@ -101,7 +101,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 3,
+            zIndex: 4,
             stroke: new ol.style.Stroke({ color: "rgba(229, 217, 53, 1)", width: 1 }),
             fill: new ol.style.Fill({ color: "rgba(229, 217, 53, 0.7)" }),
           }),
@@ -112,7 +112,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 5,
+            zIndex: 6,
             stroke: new ol.style.Stroke({ color: "rgba(38, 118, 135, 1)", width: 1 }),
             fill: hatchFill,
           }),
@@ -123,7 +123,7 @@ const hatchFill2 = new ol.style.Fill({
         geometry: "Polygon",
         styles: [
           new ol.style.Style({
-            zIndex: 2,
+            zIndex: 3,
             stroke: new ol.style.Stroke({ color: "rgba(186, 224, 82, 1)", width: 1 }),
             fill: new ol.style.Fill({ color: "rgba(186, 224, 82, 0.8)" }),
           }),
