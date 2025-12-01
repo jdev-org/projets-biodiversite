@@ -34,7 +34,7 @@
                 {{/milieu}}
                 <div>{{description}}</div>
                 <div class="my-4">
-                    <a class="cardBtn cardBtn__prim" href="" target="_blank">Consulter le RETEX</a>
+                    <!--<a class="cardBtn cardBtn__prim" href="" target="_blank">Consulter le RETEX</a>-->
                     {{#site_web}}<a class="cardBtn cardBtn__outline" href="{{site_web}}" target="_blank">En savoir plus</a>{{/site_web}}
                 </div>
                 
