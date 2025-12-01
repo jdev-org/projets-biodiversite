@@ -20,9 +20,12 @@
 	</a>	
 </div>
 <div class="abbHome__partners">
-		<a href="https://www.ofb.gouv.fr/" target="_blank"><img height="30px" src="apps/projets-biodiversite/img/abb_logo.png"></a>
-		<a href="https://www.bretagne.bzh/" target="_blank"><img height="50px" src="apps/projets-biodiversite/img/ofb_logo.png"></a>
-		<a href="https://biodiversite.bzh/" target="_blank"><img height="40px" src="apps/projets-biodiversite/img/rb_logo.png"></a>
+		<a href="https://www.ofb.gouv.fr/" target="_blank"><img height="40px" src="apps/projets-biodiversite/img/logo_rf.jpg"></a>		
+		<a href="https://www.ofb.gouv.fr/" target="_blank"><img height="50px" src="apps/projets-biodiversite/img/ofb_logo.png"></a>
+		<a href="https://www.bretagne.bzh/" target="_blank"><img height="40px" src="apps/projets-biodiversite/img/rb_logo.png"></a>
+		<a href="https://biodiversite.bzh/" target="_blank"><img height="30px" src="apps/projets-biodiversite/img/abb_logo.png"></a>
+		<span>avec le soutien de</span>
+		<a href="" target="_blank"><img height="50px" src="apps/projets-biodiversite/img/logo_europesengage.jpg"></a>
 </div>
 <div id="abb__homeInfos" class="abbHome__container">	
     <div class="accordion-item">
@@ -181,7 +184,7 @@
 }
 
 .homeHero__logo {
-	width: 8em;
+	width: 7em;
 }
 
 .xs .homeHero__logo {
@@ -213,6 +216,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	margin-bottom: 5em;
 }
 
 .abbHome__linkArrow svg {
@@ -329,7 +333,7 @@
 }
 
 .abbHome__partners {
-    padding: 0 3em;
+    padding: 8px 3em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -341,6 +345,14 @@
     margin: 0 0 0 10px;
 }
 
+.abbHome__partners > span {
+    margin: 0 5px;
+    font-size: small;
+    font-weight: 600;
+    text-transform: none;
+	line-height: 1;
+}
+
 .abbHome__partners > a:hover {
     opacity: .9;
 }
@@ -348,6 +360,7 @@
 .xs .abbHome__partners {
     padding: 0 1.5em;
     justify-content: center;
+	flex-wrap: wrap;
 }
 
 </style>
