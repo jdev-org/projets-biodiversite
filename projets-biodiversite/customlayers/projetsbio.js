@@ -1,7 +1,7 @@
 {
   // Définition des variables realtives à la couche.
-  const GEOSERVER_URL = "https://ows.region-bretagne.fr/geoserver";
-  const WORKSPACE = "interne";
+  const GEOSERVER_URL = "https://geobretagne.fr/geoserver";
+  const WORKSPACE = "abb";
   const LAYER = "projets_biodiversite";
   const LAYER_URL = `${GEOSERVER_URL}/${WORKSPACE}/wfs?service=WFS&version=1.0.0&request=GetFeature&typeNames=${LAYER}&outputFormat=application/json&srsName=EPSG:4326`;
   // Définition de la variable customlayer. 
@@ -187,7 +187,7 @@ const hatchFill2 = new ol.style.Fill({
         case "SafN":
             stl = legend.items[1].styles;
             break;
-        case "Stratégie – plan d’actions ":
+        case "Stratégie – plan d’actions":
             stl = legend.items[2].styles;
             break;
         case "TEN":
@@ -199,13 +199,13 @@ const hatchFill2 = new ol.style.Fill({
         case "Projet TVB - Phase opérationnelle":
             stl = legend.items[4].styles;
             break;
-        case "ABC":
+        case "Atlas de la Biodiversité Communale et Intercommunale":
             stl = legend.items[5].styles;
             break;
-        case "AME":
+        case "Aire marine éducative":
             stl = legend.items[6].styles;
             break;
-        case "ATE":
+        case "Aire terrestre éducative":
             stl = legend.items[7].styles;
             break;
         }
