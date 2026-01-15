@@ -123,16 +123,16 @@
         color: white;
     }
 
-    .card_ABC .itemCard__header h5, 
-    .card_ABC .cardBody_subtitle,
-    .card_ABC .card__badge,
-    .card_ABC .cardBtn__prim,
-    .card_ABC .cardBtn__outline,
-    .card_TEN .itemCard__header h5,
-    .card_TEN .cardBody_subtitle,
-    .card_TEN .card__badge,
-    .card_TEN .cardBtn__prim,
-    .card_TEN .cardBtn__outline {
+    .card_AtlasdelaBiodiversiteCommunaleetIntercommunale .itemCard__header h5, 
+    .card_AtlasdelaBiodiversiteCommunaleetIntercommunale .cardBody_subtitle,
+    .card_AtlasdelaBiodiversiteCommunaleetIntercommunale .card__badge,
+    .card_AtlasdelaBiodiversiteCommunaleetIntercommunale .cardBtn__prim,
+    .card_AtlasdelaBiodiversiteCommunaleetIntercommunale .cardBtn__outline,
+    .card_TerritoiresEngagespourlaNature .itemCard__header h5,
+    .card_TerritoiresEngagespourlaNature .cardBody_subtitle,
+    .card_TerritoiresEngagespourlaNature .card__badge,
+    .card_TerritoiresEngagespourlaNature .cardBtn__prim,
+    .card_TerritoiresEngagespourlaNature .cardBtn__outline {
         color: black!important;
     }
 
@@ -163,14 +163,14 @@
 
     const couleursProjet = {
         "RechercheAction": "#000000",
-        "SafN": "#1b218d",
+        "Solutionsd39adaptationfondeessurlaNature": "#1b218d",
         "Strategieplandactions": "#3dbea4",
-        "TEN": "#e5d935",
+        "TerritoiresEngagespourlaNature": "#e5d935",
         "ProjetTVB-Phaseoperationnelle": "#267687",
         "ProjetTVB-Diagetpland39actions": "#267687",
-        "ABC": "#bae052",
+        "AtlasdelaBiodiversiteCommunaleetIntercommunale": "#bae052",
         "AME": "#0025FF",
-        "ATE": "#43d796"
+        "Aireterrestreeducative": "#43d796"
     };
 
     const couleur = couleursProjet[cleanType] || "#303030";

@@ -12,8 +12,8 @@
     "mviewer": {
       "abb_projetsbio": {
         "printLayouts": "addons/print/layouts/standard.json",
-        "ownerLogo": "apps/projets-biodiversite/img/logo_abb.png",
-        "ownerInfos": ""
+        "ownerLogo": "",
+        "ownerInfos": "<b>Crédits :</b> Région Bretagne | Office français de la biodiversité | Agence Bretonne de la Biodiversité <br><b>Données et diffusion :</b> GéoBretagne"
       }
     }
   }

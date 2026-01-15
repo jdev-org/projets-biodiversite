@@ -224,3 +224,7 @@
 #print-informations {
     resize: none;
 }
+
+#print-informations .informations p {
+    font-size:11px
+}

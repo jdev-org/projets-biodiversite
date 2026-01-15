@@ -64,17 +64,6 @@ const hatchFill2 = new ol.style.Fill({
   const legend = {
     items: [
       {
-        label: "Recherche Action",
-        geometry: "Polygon",
-        styles: [
-          new ol.style.Style({
-            zIndex: 1,
-            stroke: new ol.style.Stroke({ color: "rgba(0, 0, 0, 1)", width: 1 }),
-            fill: new ol.style.Fill({ color: "rgba(0, 0, 0, 0)" }),
-          }),
-        ],
-      },
-      {
         label: "SafN",
         geometry: "Polygon",
         styles: [
@@ -180,33 +169,30 @@ const hatchFill2 = new ol.style.Fill({
     style: function (feature, resolution) {
       var stl;      
       if (feature.get("type_projet")) {        
-        switch (feature.get("type_projet")) {
-        case "Recherche Action":
+        switch (feature.get("type_projet")) {        
+        case "Solutions d'adaptation fondées sur la Nature":
             stl = legend.items[0].styles;
             break;
-        case "SafN":
+        case "Stratégie – plan d’actions":
             stl = legend.items[1].styles;
             break;
-        case "Stratégie – plan d’actions":
+        case "Territoires Engagés pour la Nature":
             stl = legend.items[2].styles;
             break;
-        case "TEN":
+        case "Projet TVB - Diag et plan d'actions":
             stl = legend.items[3].styles;
             break;
-        case "Projet TVB - Diag et plan d'actions":
-            stl = legend.items[4].styles;
-            break;
         case "Projet TVB - Phase opérationnelle":
-            stl = legend.items[4].styles;
+            stl = legend.items[3].styles;
             break;
         case "Atlas de la Biodiversité Communale et Intercommunale":
-            stl = legend.items[5].styles;
+            stl = legend.items[4].styles;
             break;
         case "Aire marine éducative":
-            stl = legend.items[6].styles;
+            stl = legend.items[5].styles;
             break;
         case "Aire terrestre éducative":
-            stl = legend.items[7].styles;
+            stl = legend.items[6].styles;
             break;
         }
       }

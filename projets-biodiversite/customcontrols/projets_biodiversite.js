@@ -37,7 +37,7 @@ const cc = (function () {
                     <div>Territoires Engagés pour la Nature (TEN)</div>
                 </div>
                 <div class="lgdcustom-tooltip" role="tooltip">
-                    Définition
+                    Le programme <strong>« Territoires engagés pour la nature »</strong> a pour ambition de mobiliser les EPCI et les communes en faveur de la biodiversité, dans le cadre d’un engagement structuré de trois ans. Il vise à faire émerger, reconnaître, développer et valoriser des plans d’actions territorialisés.
                 </div>
             </div>
             
@@ -56,18 +56,9 @@ const cc = (function () {
                     <div>Stratégie - plan d'actions</div>
                 </div>
                 <div class="lgdcustom-tooltip" role="tooltip">
-                    <strong>Territoires Engagés pour la Nature (TEN)</strong> est une initiative visant à faire émerger, reconnaître et valoriser les plans d’actions en faveur de la biodiversité portés par les communes et EPCI pendant 3 ans. <em>Ce</em> <em>dispositif est piloté par l'Office français de la biodiversité.</em>
+                    Démarches territoriales visant à définir une vision commune et à coordonner des actions en faveur de la biodiversité. Elles peuvent concerner l’élaboration ou la mise en œuvre de stratégies locales, régionales ou thématiques.
                 </div>
-            </div>
-            <div class="tooltip-container">
-                <div class="tooltip-trigger">
-                    <div class="lgdCustom__symbolSquare" style="background-color:rgba(0, 0, 0, 1);"></div>
-                    <div>Recherche – action</div>
-                </div>
-                <div class="lgdcustom-tooltip" role="tooltip">
-                    <strong>La recherche action</strong> est complémentaire de la recherche fondamentale, elle est délibérément dirigée vers un objectif pratique. Elle est induite par les questions des acteurs professionnels, implique ces derniers et des chercheur·ses tout en mobilisant des méthodes scientifiques.
-                </div>
-            </div>     
+            </div>               
             <div class="tooltip-container">
                 <div class="tooltip-trigger">                    
                     <span class="lgdCustom__symbolRound" style="color:rgba(67, 215, 150, 1)">⬤</span><span>Aires terrestres éducatives (ATE)</span>
