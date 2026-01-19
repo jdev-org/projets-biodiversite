@@ -179,10 +179,10 @@ const hatchFill2 = new ol.style.Fill({
         case "Territoires Engagés pour la Nature":
             stl = legend.items[2].styles;
             break;
-        case "Projet TVB - Diag et plan d'actions":
+        case "Projet trame verte et bleue – Diagnostic et plan d’actions":
             stl = legend.items[3].styles;
             break;
-        case "Projet TVB - Phase opérationnelle":
+        case "Projet trame verte et bleue – Phase opérationnelle":
             stl = legend.items[3].styles;
             break;
         case "Atlas de la Biodiversité Communale et Intercommunale":
