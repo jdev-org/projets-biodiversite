@@ -19,9 +19,9 @@
           {
             "layerId": "projets_biodiversite",
             "downloadFormats": [
-              { "label": "CSV", "format": "CSV" },
+              { "label": "CSV", "format": "csv" },
               { "label": "Geojson", "format": "application/json" },
-              { "label": "Excel", "format": "excel" }
+              { "label": "Excel", "format": "xlsx" }
             ],
             "filter": [
               {
