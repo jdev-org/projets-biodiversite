@@ -8,7 +8,8 @@
             <div class="itemCard__body">          
                 {{#porteur}}  
                 <div>
-                    <div class="cardBody_subtitle">Porteur du projet</div>                    
+                    <div class="cardBody_subtitle cardLabel_porteur">Porteur du projet</div>
+                    <div class="cardBody_subtitle cardLabel_porteur_AireEduc">Structure accompagnatrice</div>                    
                     <div class="font-w500">{{porteur}}</div>
                     {{#mail}}<div>{{mail}}</div>{{/mail}}
                     {{#telephone}}<div>{{telephone}}</div>{{/telephone}}
@@ -136,6 +137,20 @@
         color: black!important;
     }
 
+    .card_Airemarineeducative .cardLabel_porteur, 
+    .card_Aireterrestreeducative .cardLabel_porteur{
+        display:none;
+    }
+
+    .cardLabel_porteur_AireEduc{
+        display:none;
+    }
+
+    .card_Airemarineeducative .cardLabel_porteur_AireEduc, 
+    .card_Aireterrestreeducative .cardLabel_porteur_AireEduc{
+        display:block;
+    }
+
     .font-w500 {
         font-weight: 500;
     }
@@ -169,7 +184,7 @@
         "ProjettrameverteetbleuePhaseoperationnelle": "#267687",
         "ProjettrameverteetbleueDiagnosticetplandactions": "#267687",
         "AtlasdelaBiodiversiteCommunaleetIntercommunale": "#bae052",
-        "AME": "#0025FF",
+        "Airemarineeducative": "#0025FF",
         "Aireterrestreeducative": "#43d796"
     };
 

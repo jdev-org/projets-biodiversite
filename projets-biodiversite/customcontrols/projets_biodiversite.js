@@ -25,10 +25,10 @@ const cc = (function () {
             <div class="tooltip-container">
                 <div class="tooltip-trigger">
                     <div class="lgdCustom__symbolSquare hatch-square-tvb" style=""></div>
-                    <div>Trames Verte et Bleue (TVB)</div>
+                    <div>Projets Trame verte et bleue</div>
                 </div>
                 <div class="lgdcustom-tooltip" role="tooltip">
-                    Définition
+                    Les projets "Trame verte et bleue" réalisent un diagnostic des continuités écologiques du territoire, à partir duquel ils élaborent et mettent en œuvre un plan d’actions territorial pour la préservation et la remise en état des continuités écologiques. La plupart bénéficient d’un accompagnement par la Région Bretagne et/ou l’Europe. 
                 </div>
             </div>
             <div class="tooltip-container">
