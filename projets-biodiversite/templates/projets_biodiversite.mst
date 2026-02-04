@@ -15,6 +15,12 @@
                     {{#telephone}}<div>{{telephone}}</div>{{/telephone}}
                 </div> 
                 {{/porteur}} 
+                {{#coordination_territoriale}}                 
+                <div>
+                    <div class="cardBody_subtitle">Coordination territoriale</div>                    
+                    <div>{{coordination_territoriale}}</div>
+                </div> 
+                {{/coordination_territoriale}}
                 {{#type_projet}}                 
                 <div>
                     <div class="cardBody_subtitle">Dispositif</div>                    
