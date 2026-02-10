@@ -49,16 +49,7 @@ const cc = (function () {
                 <div class="lgdcustom-tooltip" role="tooltip">
                     <strong>Les Solutions d’adaptation fondées sur la Nature (SafN)</strong> : sont des actions visant à protéger, gérer de manière durable et restaurer des écosystèmes naturels ou modifiés pour l'adaptation au changement climatique, tout en assurant le bien-être humain et en produisant des bénéfices pour la biodiversité.
                 </div>
-            </div>
-            <div class="tooltip-container">
-                <div class="tooltip-trigger">
-                    <div class="lgdCustom__symbolSquare hatch-square-strat" style=""></div>
-                    <div>Stratégie - plan d'actions</div>
-                </div>
-                <div class="lgdcustom-tooltip" role="tooltip">
-                    Démarches territoriales visant à définir une vision commune et à coordonner des actions en faveur de la biodiversité. Elles peuvent concerner l’élaboration ou la mise en œuvre de stratégies locales, régionales ou thématiques.
-                </div>
-            </div>               
+            </div>              
             <div class="tooltip-container">
                 <div class="tooltip-trigger">                    
                     <span class="lgdCustom__symbolRound" style="color:rgba(67, 215, 150, 1)">⬤</span><span>Aires terrestres éducatives (ATE)</span>

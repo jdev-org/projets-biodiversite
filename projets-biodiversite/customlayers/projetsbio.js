@@ -3,7 +3,7 @@
   const GEOSERVER_URL = "https://geobretagne.fr/geoserver";
   const WORKSPACE = "abb";
   const LAYER = "projets_biodiversite";
-  const LAYER_URL = `${GEOSERVER_URL}/${WORKSPACE}/wfs?service=WFS&version=1.0.0&request=GetFeature&typeNames=${LAYER}&outputFormat=application/json&srsName=EPSG:4326`;
+  const LAYER_URL = `${GEOSERVER_URL}/${WORKSPACE}/wfs?service=WFS&version=1.0.0&request=GetFeature&typeNames=${LAYER}&outputFormat=application/json&srsName=EPSG:4326&CQL_FILTER=type_projet%20%3C%3E%20%27Strat%C3%A9gie%20%E2%80%93%20plan%20d%E2%80%99actions%27`;
   // Définition de la variable customlayer. 
   const LAYER_ID = "projets_biodiversite";
 
@@ -172,9 +172,6 @@ const hatchFill2 = new ol.style.Fill({
         switch (feature.get("type_projet")) {        
         case "Solutions d'adaptation fondées sur la Nature":
             stl = legend.items[0].styles;
-            break;
-        case "Stratégie – plan d’actions":
-            stl = legend.items[1].styles;
             break;
         case "Territoires Engagés pour la Nature":
             stl = legend.items[2].styles;
